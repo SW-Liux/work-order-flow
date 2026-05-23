@@ -1,0 +1,6 @@
+# 个人本地配置（不纳入共享仓库）
+local/
+
+# Node.js
+node_modules/
+package-lock.json

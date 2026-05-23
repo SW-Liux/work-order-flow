@@ -1,0 +1,31 @@
+{
+  "name": "@sw-liux/work-order-flow",
+  "version": "1.8.0",
+  "description": "AI Agent 通用工单驱动开发工作流 Skills — 从接收工单到交付的全流程规范",
+  "bin": {
+    "work-order-flow": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "scripts/",
+    "templates/",
+    "SKILL.md",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "keywords": [
+    "ai-agent",
+    "workflow",
+    "skills",
+    "cursor",
+    "claude-code",
+    "codex",
+    "development-workflow"
+  ],
+  "author": "SW-Liux",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SW-Liux/work-order-flow.git"
+  }
+}
