@@ -1,6 +1,6 @@
 {
   "name": "@sw-liux/work-order-flow",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "AI Agent 通用工单驱动开发工作流 Skills — 从接收工单到交付的全流程规范",
   "bin": {
     "work-order-flow": "./bin/cli.js"
