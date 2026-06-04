@@ -2,6 +2,16 @@
 
 All notable changes to this skill will be documented in this file.
 
+## [1.10.0] - 2026-06-04
+
+### Added
+- **跨项目文件搜索能力**（Phase 2.4.1）：通过 Shell + `fd`/`rg` 突破 workspace 范围限制
+  - `fd`：按文件名全盘搜索（毫秒级）
+  - `rg`：按文件内容全盘搜索（支持正则、上下文显示）
+  - 明确了 IDE 内置搜索 vs Shell 搜索的优先级规则
+  - 安装命令：`winget install sharkdp.fd BurntSushi.ripgrep.MSVC`
+- **Cursor Rule**：创建 `cross-project-search.mdc`（alwaysApply），让非 Skill 场景下也有跨项目搜索意识
+
 ## [1.9.0] - 2026-05-26
 
 ### Added

@@ -1,7 +1,7 @@
 ---
 name: work-order-flow
-version: 1.9.0
-last_updated: 2026-05-26
+version: 1.10.0
+last_updated: 2026-06-04
 description: >-
   处理钉钉工单/聊天记录/零散需求的完整开发工作流。从接收工单、解析文档、分析需求、
   规划设计、执行迭代到生成日报的全流程管理。当用户提到工单、需求、bug修复、
@@ -284,6 +284,27 @@ python .cursor/skills/work-order-flow/scripts/parse_doc.py input.pdf -o output_d
    - 是否有参考的已有实现（如其他项目的代码）？
    - 部署环境信息？
 ```
+
+#### 2.4.1 跨项目文件搜索
+
+当 IDE 内置搜索工具受限于当前项目/工作区范围时，可通过终端命令扩大搜索范围。如果系统已安装 `fd`（文件名搜索）和 `rg`（ripgrep，内容搜索），可以按需使用：
+
+```bash
+# 按文件名搜索
+fd "ZCellDao.xml" D:/CodeRepository --type f
+
+# 按内容搜索
+rg "from cellborder" D:/CodeRepository --glob "*.xml" -l      # 只列文件名
+rg "from cellborder" D:/CodeRepository --glob "*.xml" -C 2    # 带上下文
+```
+
+适用场景：
+- 排查同类问题的影响范围（如"其他工艺项目是否有相同 bug"）
+- 查找不在当前项目中的参照代码
+- 确认某个文件/函数在整个代码库中的所有出现位置
+
+> 安装（Windows）：`winget install sharkdp.fd BurntSushi.ripgrep.MSVC`
+> 安装（macOS）：`brew install fd ripgrep`
 
 ---
 
